@@ -1,0 +1,1 @@
+(()=>{var e=document.querySelector(".care-program__how-use-link"),o=document.querySelector(".care-program__how-use");e&&e.addEventListener("click",()=>{o.classList.toggle("care-program__how-use--close")});})();
