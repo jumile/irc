@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["source/scripts/search.js"],
+  "sourcesContent": ["const searchBtn = document.querySelector('.search__button');\nconst searchBlock = document.querySelector('.search');\n\nsearchBtn.addEventListener('click', () => {\n searchBlock.classList.toggle('search--open')\n})\n"],
+  "mappings": ";;AAAA,MAAM,YAAY,SAAS,cAAc,iBAAiB;AAC1D,MAAM,cAAc,SAAS,cAAc,SAAS;AAEpD,YAAU,iBAAiB,SAAS,MAAM;AACzC,gBAAY,UAAU,OAAO,cAAc;AAAA,EAC5C,CAAC;",
+  "names": []
+}

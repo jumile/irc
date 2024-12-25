@@ -1,1 +1,32 @@
-(()=>{document.body.addEventListener("click",n=>{let e=n.target;if(e.classList.contains("count-button--plus")){let t=e.parentNode,u=t.querySelector('input[type="number"]'),r=t.querySelector(".count-button--minus");a(u,r)}if(e.classList.contains("count-button--minus")){let u=e.parentNode.querySelector('input[type="number"]');c(u,e)}});function a(n,e){e.disabled=!1;let t=Number(n.value);t++,n.value=t}function c(n,e){let t=Number(n.value);t>0&&t--,t===0&&(e.disabled=!0),n.value=t}})();
+(() => {
+  // source/scripts/counter.js
+  document.body.addEventListener("click", (e) => {
+    let target = e.target;
+    if (target.classList.contains("count-button--plus")) {
+      const targetParent = target.parentNode;
+      const targetField = targetParent.querySelector('input[type="number"]');
+      const minusBtn = targetParent.querySelector(".count-button--minus");
+      increaseCount(targetField, minusBtn);
+    }
+    if (target.classList.contains("count-button--minus")) {
+      const targetParent = target.parentNode;
+      const targetField = targetParent.querySelector('input[type="number"]');
+      decreaseCount(targetField, target);
+    }
+  });
+  function increaseCount(field, target) {
+    target.disabled = false;
+    let currentValue = Number(field.value);
+    currentValue++;
+    field.value = currentValue;
+  }
+  function decreaseCount(field, btn) {
+    let currentValue = Number(field.value);
+    if (currentValue > 0)
+      currentValue--;
+    if (currentValue === 0)
+      btn.disabled = true;
+    field.value = currentValue;
+  }
+})();
+//# sourceMappingURL=counter.js.map

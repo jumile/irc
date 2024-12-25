@@ -1,1 +1,10 @@
-(()=>{var e=document.querySelectorAll(".button-favorite");e.forEach(t=>{t.addEventListener("click",()=>{t.classList.toggle("button-favorite--selected")})});})();
+(() => {
+  // source/scripts/favorites.js
+  var favButton = document.querySelectorAll(".button-favorite");
+  favButton.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("button-favorite--selected");
+    });
+  });
+})();
+//# sourceMappingURL=favorites.js.map

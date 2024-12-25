@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["source/scripts/how-use.js"],
+  "sourcesContent": ["const howUseButton = document.querySelector('.care-program__how-use-link');\nconst howUseBlock = document.querySelector('.care-program__how-use');\nif (howUseButton) {\n  howUseButton.addEventListener('click', () => {\n    howUseBlock.classList.toggle('care-program__how-use--close');\n  });\n}\n"],
+  "mappings": ";;AAAA,MAAM,eAAe,SAAS,cAAc,6BAA6B;AACzE,MAAM,cAAc,SAAS,cAAc,wBAAwB;AACnE,MAAI,cAAc;AAChB,iBAAa,iBAAiB,SAAS,MAAM;AAC3C,kBAAY,UAAU,OAAO,8BAA8B;AAAA,IAC7D,CAAC;AAAA,EACH;",
+  "names": []
+}

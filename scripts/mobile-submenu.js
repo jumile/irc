@@ -1,1 +1,35 @@
-(()=>{var u=document.querySelectorAll(".main-nav__link--submenu"),o=document.querySelectorAll(".submenu");u.forEach(e=>{e.addEventListener("click",a=>{a.preventDefault();let m=e.parentNode.querySelector(".submenu");for(let s of u)if(s.classList.contains("main-nav__link--submenu-closed")&&s!==e){s.classList.remove("main-nav__link--submenu-closed");for(let t of o)t.classList.contains("main-nav__submenu--opened")&&t.classList.remove("main-nav__submenu--opened")}m.classList.toggle("main-nav__submenu--opened"),e.classList.toggle("main-nav__link--submenu-closed")})});document.body.addEventListener("click",e=>{if(!e.target.classList.contains("main-nav__link--submenu")){for(let n of o)n.classList.remove("main-nav__submenu--opened");for(let n of u)n.classList.remove("main-nav__link--submenu-closed")}});})();
+(() => {
+  // source/scripts/mobile-submenu.js
+  var submenuLinks = document.querySelectorAll(".main-nav__link--submenu");
+  var submenus = document.querySelectorAll(".submenu");
+  submenuLinks.forEach((clickedLink) => {
+    clickedLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      const submenuWrapper = clickedLink.parentNode;
+      const submenu = submenuWrapper.querySelector(".submenu");
+      for (let link of submenuLinks) {
+        if (link.classList.contains("main-nav__link--submenu-closed") && link !== clickedLink) {
+          link.classList.remove("main-nav__link--submenu-closed");
+          for (let menu of submenus) {
+            if (menu.classList.contains("main-nav__submenu--opened"))
+              menu.classList.remove("main-nav__submenu--opened");
+          }
+        }
+      }
+      submenu.classList.toggle("main-nav__submenu--opened");
+      clickedLink.classList.toggle("main-nav__link--submenu-closed");
+    });
+  });
+  document.body.addEventListener("click", (e) => {
+    let target = e.target;
+    if (!target.classList.contains("main-nav__link--submenu")) {
+      for (let menu of submenus) {
+        menu.classList.remove("main-nav__submenu--opened");
+      }
+      for (let link of submenuLinks) {
+        link.classList.remove("main-nav__link--submenu-closed");
+      }
+    }
+  });
+})();
+//# sourceMappingURL=mobile-submenu.js.map

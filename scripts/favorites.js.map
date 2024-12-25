@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["source/scripts/favorites.js"],
+  "sourcesContent": ["const favButton = document.querySelectorAll('.button-favorite');\n\nfavButton.forEach((btn) => {\n  btn.addEventListener('click', () => {\n    btn.classList.toggle('button-favorite--selected');\n  })\n});\n"],
+  "mappings": ";;AAAA,MAAM,YAAY,SAAS,iBAAiB,kBAAkB;AAE9D,YAAU,QAAQ,CAAC,QAAQ;AACzB,QAAI,iBAAiB,SAAS,MAAM;AAClC,UAAI,UAAU,OAAO,2BAA2B;AAAA,IAClD,CAAC;AAAA,EACH,CAAC;",
+  "names": []
+}
